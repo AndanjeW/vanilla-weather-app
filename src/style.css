@@ -15,6 +15,12 @@ h2,h3{
     line-height: 1.5;
     color: #878787;
 }
+img{
+    float: left;
+    height: 64px;
+    width: 64px;
+   
+}
 ul{
     list-style: none;
     margin: 0;
@@ -22,14 +28,22 @@ ul{
     color: #878787;
 }
 .weather-app{
-    max-width: 600px;
-    margin: 30px auto;
     padding: 20px;
     border: 1px solid #dadde1;
     border-radius: 5px;
-    margin-bottom: 5px;
 }
-#by-line{
+.app-wrapper{
+    max-width: 600px;
+    margin: 30px auto;
+}
+.current-temp{
+    color: #212121;
+    font-size: 64px;
+    font-weight: 400;   
+    line-height: 1; 
+}
+.units{
     position: relative;
-    left: 50px;
+    font-size: 16px;
+    top: -34px;
 }
