@@ -15,6 +15,7 @@ h2,h3{
     line-height: 1.5;
     color: #878787;
 }
+
 img{
     float: left;
     height: 64px;
@@ -47,3 +48,6 @@ ul{
     font-size: 16px;
     top: -34px;
 }
+#weather-conditions:first-letter{
+    text-transform: capitalize
+  }
