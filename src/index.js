@@ -28,8 +28,19 @@ humidityElement.innerHTML= response.data.main.humidity;
 conditionsElement.innerHTML = response.data.weather[0].description;
 dateElement.innerHTML = formatDate(response.data.dt * 1000);
 }
+function search(city) {
+    let apiKey = "e569e71e164e7e0ec0fb7827f996e194";
+    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=Nairobi&appid=${apiKey}&units=metric`
+    axios.get(apiUrl).then(displayTemperature);
+}
 
 
-let apiKey = "e569e71e164e7e0ec0fb7827f996e194";
-let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=Nairobi&appid=${apiKey}&units=metric`
-axios.get(apiUrl).then(displayTemperature);
+function handleSearch(event){
+    event.preventDefault();
+    let cityInputElement = document.querySelector("#city-input")
+    search(cityInputElement.value);
+}
+
+let form = document.querySelector("#search-form")
+form.addEventListener("submit", handleSearch);
+search("Nairobi");
