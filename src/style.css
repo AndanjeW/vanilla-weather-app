@@ -36,6 +36,7 @@ ul{
 .app-wrapper{
     max-width: 600px;
     margin: 30px auto;
+    
 }
 #current-temp{
     color: #212121;
@@ -62,3 +63,21 @@ text-decoration: none;
 #weather-conditions:first-letter{
     text-transform: capitalize
   }
+  .weather-forecast{
+      
+    margin-top: 20px;
+    text-align: center;
+    color: #000;
+  }
+ .weather-forecast-day{
+    font-size: 16px;
+    opacity: 0.8;
+
+ }
+ .weather-forecast-temp{
+     font-size: 13px;
+ }
+ .weather-forecast-temp-min{
+opacity: 0.5;
+ }
+ 

@@ -10,55 +10,73 @@
     <title>Vanilla Weather App</title>
 </head>
 <body>
-    <div class="container">
-        <div class="app-wrapper">
-        <div class="weather-app">
-            <form id="search-form" class="mb-3">
-                <div class="row">
-                    <div class="col-9">
-                        <input type="search"
-                        placeholder="Type city..."
-                        class="form-control"
-                        id="city-input">
-                    </div>
-                    <div class="col-3">
-                        <input type="submit"
-                        value="search"
-                        class="btn btn-primary"
-                        id="search-input">
-                    </div>
-                </div>
-            </form>
-    <h1 id="city"></h1>
-    <h2 id="date">
-        Sunday 06:19
-    </h2>
-    <h3 id="weather-conditions"></h3>
-    <div class="row">
+ <div class="container">
+     <div class="app-wrapper"> 
+         <div class="weather-app">
+              <form id="search-form" class="mb-3">
+                  <div class="row">
+                     <div class="col-9">
+                         <input
+                         type="search"
+                         placeholder="Type city..."
+                         class="form-control"
+                         id="city-input">
+                     </div>
+                      <div class="col-3">
+                         <input
+                         type="submit"
+                         value="search"
+                         class="btn btn-primary"
+                         id="search-input">
+                     </div>
+                  </div>
+              </form>
 
-<div class="col-sm-6">
-    <div class="temperature">
-    <img 
-    src=""
-     alt=""
-     id="icon">
-    <span id="current-temp"></span>
-    <span class="units"><a href="#" class="active" id="celsius-link">°C </a> | <a href="#" id="fahrenheit-link">F</a> </span>
-</div>
+              <h1 
+                 id="city">
+              </h1>
+              <h2 
+                 id="date">
+                 Sunday 06:19
+              </h2>
+              <h3 
+                 id="weather-conditions">
+              </h3>
+
+             <div class="row">
+                  <div class="col-sm-6">
+                     <div class="temperature">
+                         <img 
+                           src=""
+                           alt=""
+                           id="icon"
+                          >
+                         <span 
+                           id="current-temp">
+                         </span>
+                          <span 
+                            class="units">
+                            <a href="#" class="active" id="celsius-link">°C </a> |
+                            <a href="#" id="fahrenheit-link">F</a> 
+                          </span>
+                    </div>
+                  </div>
+             
+                 <div class="col-sm-6"> 
+                     <ul>
+                       <li>Humidity:<span id="humidity"></span>%</li>
+                       <li>Wind: <span id="wind"></span> km/h</li>
+                      </ul>
+                 </div>
+             </div>
+
+              <div class="weather-forecast" id="forecast">
+                   
+              </div>
+          </div>
+           <small id="by-line"> <a href="https://github.com/AndanjeW/vanilla-weather-app" target="_blank">open-source code,</a>  by Andanje Wobanda</small>
+        </div>
     </div>
-
-
-<div class="col-sm-6"> 
-    <ul>
-    <li>Humidity: <span id="humidity"></span>%</li>
-    <li>Wind: <span id="wind"></span> km/h</li>
-</ul>
-</div>
-</div>
-</div>
-<small id="by-line"> <a href="https://github.com/AndanjeW/vanilla-weather-app" target="_blank">open-source code,</a>  by Andanje Wobanda</small>
-</div>
-</div>
-<script src="src/index.js"></script>
+ <script src="src/index.js"></script>
 </body>
 </html>

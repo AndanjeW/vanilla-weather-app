@@ -71,7 +71,34 @@ function showCelsiusTemp(event){
     fahrenheitLink.classList.remove("active");
     temperatureElement.innerHTML = Math.round(celsiusTemp);
     
-    
+    }
+
+    function displayForecast(){
+       let forecastElement = document.querySelector("#forecast");
+
+       let forecastHTML= `<div class="row">`;
+       let days = ["Mon", "Tue", "Wed", "Thu", "Fri"];
+       days.forEach(function(day){
+        forecastHTML = 
+        forecastHTML + `
+          <div class="col-2">
+              <div class="weather-forecast-day">${day}</div>
+             <img 
+             src="https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png" 
+             alt="" 
+             width="42"
+             >
+  
+         <div class="weather-forecast-temp">
+             <span class="weather-forecast-temp-max">18°</span>
+              <span class="weather-forecast-temp-min">14°</span>
+          </div>
+      </div>
+      `;
+       });
+  
+    forecastHTML = forecastHTML + `</div>`;
+    forecastElement.innerHTML= forecastHTML;
     }
 
 let celsiusTemp = null;
@@ -82,3 +109,4 @@ fahrenheitLink.addEventListener("click", showFahrenheitTemp)
 let celsiusLink = document.querySelector("#celsius-link");
 celsiusLink.addEventListener("click", showCelsiusTemp)
 search("Nairobi");
+displayForecast();
