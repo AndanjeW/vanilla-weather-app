@@ -25,9 +25,9 @@ let temperatureElement = document.querySelector("#current-temp");
 let cityElement = document.querySelector("#city");
 let windElement = document.querySelector("#wind");
 let humidityElement = document.querySelector("#humidity");
-let dateElement = document.querySelector("#date")
-let conditionsElement = document.querySelector("#weather-conditions")
-let iconElement = document.querySelector("#icon")
+let dateElement = document.querySelector("#date");
+let conditionsElement = document.querySelector("#weather-conditions");
+let iconElement = document.querySelector("#icon");
 
 celsiusTemp = response.data.main.temp;
 
@@ -62,23 +62,6 @@ form.addEventListener("submit", handleSearch);
 
 
 
-function showFahrenheitTemp(event){
-event.preventDefault();
-let temperatureElement = document.querySelector("#current-temp");
-celsiusLink.classList.remove("active");
-fahrenheitLink.classList.add("active");
-let fahrenheitTemp = (celsiusTemp * 9)/ 5 + 32;
-temperatureElement.innerHTML = Math.round(fahrenheitTemp);
-
-}
-function showCelsiusTemp(event){
-    event.preventDefault();
-    let temperatureElement = document.querySelector("#current-temp");
-    celsiusLink.classList.add("active");
-    fahrenheitLink.classList.remove("active");
-    temperatureElement.innerHTML = Math.round(celsiusTemp);
-    
-    }
 
     function formatDay(timestamp){
         let date = new Date(timestamp * 1000);
@@ -117,11 +100,6 @@ function showCelsiusTemp(event){
     forecastElement.innerHTML= forecastHTML;
     }
 
-let celsiusTemp = null;
-
-let fahrenheitLink = document.querySelector("#fahrenheit-link");
-fahrenheitLink.addEventListener("click", showFahrenheitTemp)
-
 let celsiusLink = document.querySelector("#celsius-link");
-celsiusLink.addEventListener("click", showCelsiusTemp)
+
 search("Nairobi");
